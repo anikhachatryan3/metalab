@@ -1,25 +1,30 @@
-a.color-white:hover {
-    color: lightblue;
+body {
+    background-color: #333;
 }
-
-.bg-black {
-    background-color: black;
+.color {
+    background-color: #eee;
 }
-
-.color-white {
+.center {
+    margin: auto;
+    width: 25%;
+    border: 3px solid #eee;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 5rem;
+}
+button {
+    background-color: red;
+    border: none;
     color: white;
-}
-
-.title {
-    font-size: 60px;
-}
-
-.nav-element {
-    font-size: 40px;
-    text-align: right;
-}
-
-.display {
+    padding: .75rem .75rem;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    position: float;
+    font-size: 1rem;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
 }
