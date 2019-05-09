@@ -11,6 +11,7 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     padding: 5rem;
+    margin-top: 10px;
 }
 .center-posts {
     margin: auto;
@@ -38,6 +39,25 @@ button {
 }
 .align-right {
     text-align: right;
+}
+.topnav {
+    background-color: #eee;
+    border: 3px solid #eee;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
+}
+.topnav:hover {
+    color: red;
+}
+.space {
+    margin-left: 10px;
 }
 .welcome {
     font-weight: bolder;

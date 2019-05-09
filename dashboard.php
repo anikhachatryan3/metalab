@@ -6,8 +6,8 @@
         $db = new PDO($conn, "root", "root", [
             PDO::ATTR_PERSISTENT=> true
         ]);
-        $stmt = $db->prepare("SELECT * FROM posts");
-        if($stmt->execute()) {
+        $stmt = $db->prepare("SELECT * FROM posts WHERE user_id = ?");
+        if($stmt->execute([$_SESSION['id']])) {
             $posts = $stmt->fetchAll();
         }
     }
@@ -38,7 +38,7 @@
                 }
             ?>
             <div class="welcome">
-                <?php echo "Welcome, ".$_SESSION['firstname']." ".$_SESSION['lastname']."!"; ?>
+                <?php echo "Your Posts:"; ?>
             </div>
             <div class="form">
             <form action="./create_post.php" method="post">
