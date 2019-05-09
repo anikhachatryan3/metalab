@@ -1,5 +1,6 @@
 <?php
+    session_destroy();
     session_start();
-    $_SESSION['LOG_OUT'] = 'You have successfully logged out!';
-    header('Location: http://localhost/2019/pathfinder.php');
+    $_SESSION['SUCCESS_MESSAGE'] = 'You have successfully logged out!';
+    header('Location: login.php');
 ?>

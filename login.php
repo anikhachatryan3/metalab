@@ -21,9 +21,12 @@
             ?>
             <strong>Log In Here:</strong><br><br>
             <form action="./login_process.php" method="post">
-                <strong>E-mail:</strong> <input type = "email" name = "email"><br><br>
-                <strong>Password:</strong> <input type = "password" name = "password"><br><br>
-                <button type = "submit">Submit</button>
+                <strong class="align-right">E-mail:</strong> <input type = "email" name = "email"><br><br>
+                <strong class="align-right">Password:</strong> <input type = "password" name = "password"><br><br>
+                <button class="button" type = "submit">Log In</button>
+            </form>
+            <form action="./register.php" method="post">
+                <button class="button" type = "text">Register Here</button>
             </form>
         </div>
     </body>

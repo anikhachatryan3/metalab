@@ -12,6 +12,14 @@ body {
     font-family: Arial, sans-serif;
     padding: 5rem;
 }
+.center-posts {
+    margin: auto;
+    width: 80%;
+    border: 3px solid #eee;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 5rem;
+}
 button {
     background-color: red;
     border: none;
@@ -27,4 +35,45 @@ button {
 }
 .success {
     color: green;
+}
+.align-right {
+    text-align: right;
+}
+.welcome {
+    font-weight: bolder;
+    font-size: 35px;
+}
+.form {
+    padding-top: 15px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.post {
+    padding: 5px;
+    border: 2px solid rgb(221, 6, 6);
+    margin: 15px;
+    margin-bottom: 5px;
+}
+.title {
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+    margin-top: 3px;
+}
+.body {
+    color: rgb(39, 39, 39);
+    font-size: 19px;
+    margin-top: 0.5px;
+    margin-bottom: 3px;
+}
+.date {
+    font-size: 13px;
+    text-align: right;
+    margin-right: 3px;
+    margin-bottom: 2px;
+}
+.button:active {
+    background-color: rgb(192, 7, 7);
+    color: rgba(255, 255, 255, 0.699);
 }
