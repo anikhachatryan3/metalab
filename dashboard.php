@@ -48,17 +48,18 @@
             </form>
             </div>
             <div>
-                <?php for ($i = 0; $i < count($posts); $i++) {
+                <?php 
+                for ($i = 0; $i < count($posts); $i++) {
+                    $user_id = $posts[$i]['user_id'];
                     $user;
                      try {
-                        $db_user = new PDO($conn, "root", "root", [
-                            PDO::ATTR_PERSISTENT=> true
-                        ]);
-                        $stmt_user = $db_user->prepare("SELECT * FROM users WHERE id = ?");
-                        if($stmt_user->execute($posts[$i]['user_id'])) {
+                        $stmt_user = $db->prepare("SELECT * FROM users WHERE id = ?");
+                        if($stmt_user->execute([$user_id])) {
                             $user = $stmt_user->fetchAll();
-                            var_dump("success");
-                        } else {
+                            //var_dump($user);
+                            //echo $posts[$i]['user_id'];
+                        }
+                        else {
                             var_dump("error");
                         }
                     }
@@ -67,6 +68,9 @@
                     }
                     ?>
                     <div class="post">
+                    <div class="user">
+                            <?php echo $user[0]['username']." posted:"; ?>
+                        </div>
                         <div class="title">
                             <?php echo $posts[$i]['title']; ?>
                         </div>
@@ -75,9 +79,6 @@
                         </div>
                         <div class="date">
                             <?php echo $posts[$i]['date']; ?>
-                        </div>
-                        <div class="user">
-                            <?php echo $user; ?>
                         </div>
                         <?php if($posts[$i]['user_id'] == $_SESSION['id']) { ?>
                             <form action="./delete_post.php" method="post">

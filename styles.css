@@ -59,6 +59,10 @@ button {
 .space {
     margin-left: 10px;
 }
+.logout {
+    text-align: right;
+    margin-right: 10px;
+}
 .welcome {
     font-weight: bolder;
     font-size: 35px;
@@ -74,6 +78,9 @@ button {
     border: 2px solid rgb(221, 6, 6);
     margin: 15px;
     margin-bottom: 5px;
+}
+.user {
+    font-size: 18px;
 }
 .title {
     font-weight: bolder;
