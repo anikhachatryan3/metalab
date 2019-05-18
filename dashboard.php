@@ -22,9 +22,9 @@
     </head>
     <body>
         <div class="topnav">
-            <a class="space" href="dashboard.php">Dashboard</a>
-            <a class="space" href="homepage.php">Main Page</a>
-            <a class="space" href="logout.php">Logout</a>
+            <li><a class="space" href="dashboard.php">Dashboard</a></li>
+            <li><a class="space" href="homepage.php">Main Page</a></li>
+            <li><a style="float:right" class="logout" href="logout.php">Logout</a></li>
         </div>
         <div class="center-posts color">
             <?php 
@@ -56,8 +56,7 @@
                         $stmt_user = $db->prepare("SELECT * FROM users WHERE id = ?");
                         if($stmt_user->execute([$user_id])) {
                             $user = $stmt_user->fetchAll();
-                            //var_dump($user);
-                            //echo $posts[$i]['user_id'];
+                            $date = $posts[$i]['date'];
                         }
                         else {
                             var_dump("error");
@@ -78,7 +77,7 @@
                             <?php echo $posts[$i]['body']; ?>
                         </div>
                         <div class="date">
-                            <?php echo $posts[$i]['date']; ?>
+                            <?php echo date("m/d/Y", strtotime($date))." at ".date("h:ia", strtotime($date)); ?>
                         </div>
                         <?php if($posts[$i]['user_id'] == $_SESSION['id']) { ?>
                             <form action="./delete_post.php" method="post">

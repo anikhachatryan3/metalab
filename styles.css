@@ -41,19 +41,32 @@ button {
     text-align: right;
 }
 .topnav {
-    background-color: #eee;
-    border: 3px solid #eee;
+    background-color: rgb(209, 209, 209);
     margin: auto;
     overflow: hidden;
-    width: 100%;
+    width: 1234px;
     position: fixed;
     top: 0;
     color: black;
     font-size: 20px;
     text-align: left;
-    padding: 20px;
+    padding: 15px;
 }
-.topnav:hover {
+li {
+    display: inline;
+}
+li a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 20px;
+    color: black;
+    float: left;
+}
+li a:hover {
+    background-color: rgb(139, 139, 139);
+    color: white;
+}
+li a:active {
     color: red;
 }
 .space {
@@ -61,7 +74,7 @@ button {
 }
 .logout {
     text-align: right;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 .welcome {
     font-weight: bolder;
@@ -81,6 +94,9 @@ button {
 }
 .user {
     font-size: 18px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 .title {
     font-weight: bolder;
@@ -97,8 +113,8 @@ button {
 .date {
     font-size: 13px;
     text-align: right;
-    margin-right: 3px;
-    margin-bottom: 2px;
+    margin-right: 5px;
+    margin-bottom: 3px;
 }
 .button:active {
     background-color: rgb(192, 7, 7);
