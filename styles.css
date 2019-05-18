@@ -41,7 +41,8 @@ button {
     text-align: right;
 }
 .topnav {
-    background-color: rgb(209, 209, 209);
+    background-color: #eee;
+    border: 2px solid #eee;
     margin: auto;
     overflow: hidden;
     width: 1234px;
